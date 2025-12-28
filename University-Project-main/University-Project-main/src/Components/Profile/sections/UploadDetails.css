@@ -1,0 +1,35 @@
+@import './shared.css';
+
+.upload-details-section { max-width: 1400px; margin: 0 auto; }
+
+.upload-details-section .section-title { color: #007bff; font-size: 1.5rem; font-weight: bold; margin-bottom: 2rem; text-align: center; }
+
+.upload-container { display: flex; flex-direction: column; gap: 2rem; margin-bottom: 2rem; }
+
+.upload-section { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-left: 4px solid #007bff; }
+
+.upload-section h3 { color: #007bff; margin-bottom: 1rem; font-size: 1.2rem; }
+
+.upload-area { position: relative; border: 2px dashed #dee2e6; border-radius: 8px; padding: 2rem; text-align: center; transition: border-color 0.3s ease; background: #f8f9fa; }
+.upload-area:hover { border-color: #007bff; background: #f0f8ff; }
+
+.file-input { position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; top: 0; left: 0; }
+
+.upload-label { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; cursor: pointer; color: #6c757d; }
+.upload-icon { font-size: 2rem; color: #007bff; }
+.upload-label span { font-size: 1.1rem; font-weight: 600; color: #333; }
+.upload-label small { font-size: 0.9rem; color: #6c757d; }
+
+.file-list { margin-top: 1rem; }
+.file-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: #f8f9fa; border-radius: 6px; margin-bottom: 0.5rem; }
+.file-icon { color: #007bff; font-size: 1.2rem; }
+.file-name { flex: 1; font-weight: 500; color: #333; }
+.file-size { color: #6c757d; font-size: 0.9rem; }
+
+.upload-notes { background: #e7f3ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #007bff; margin-bottom: 2rem; }
+.upload-notes h3 { color: #007bff; margin-bottom: 1rem; font-size: 1.1rem; }
+.upload-notes ul { margin: 0; padding-left: 1.5rem; }
+.upload-notes li { margin-bottom: 0.5rem; color: #495057; }
+
+/* Responsive Design */
+@media (max-width: 768px) { .upload-section { padding: 1rem; } .upload-area { padding: 1.5rem; } .upload-details-section .section-title { font-size: 1.3rem; } .file-item { flex-direction: column; align-items: flex-start; gap: 0.25rem; } }

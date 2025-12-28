@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.af843161.css",
+    "main.js": "/static/js/main.d48ca2e9.js",
+    "static/media/svg.svg": "/static/media/svg.25bd0629cd00c94df49ffb5911025fd9.svg",
+    "static/media/airlogo.png": "/static/media/airlogo.a4e292f5ca2f7105e3d5.png",
+    "index.html": "/index.html",
+    "main.af843161.css.map": "/static/css/main.af843161.css.map",
+    "main.d48ca2e9.js.map": "/static/js/main.d48ca2e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af843161.css",
+    "static/js/main.d48ca2e9.js"
+  ]
+}

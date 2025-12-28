@@ -1,0 +1,19 @@
+@import './shared.css';
+
+.employment-details-section { max-width: 1400px; margin: 0 auto; }
+
+.employment-details-section .section-title { color: #007bff; font-size: 1.5rem; font-weight: bold; margin-bottom: 2rem; text-align: center; }
+
+.employment-list { display: flex; flex-direction: column; gap: 2rem; }
+
+.employment-item { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-left: 4px solid #007bff; }
+
+.employment-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #e9ecef; }
+
+.employment-header h3 { color: #007bff; margin: 0; font-size: 1.2rem; }
+
+.add-employment { text-align: center; margin-top: 2rem; }
+.add-employment .btn { height: 44px; padding: 0 12px; font-size: 1rem; }
+
+/* Responsive Design */
+@media (max-width: 768px) { .employment-item { padding: 1rem; } .employment-header { flex-direction: column; gap: 1rem; align-items: flex-start; } .employment-details-section .section-title { font-size: 1.3rem; } }

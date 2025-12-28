@@ -1,0 +1,594 @@
+/* Application Form Container */
+.application-form-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9fc;
+  /* Avoid nested page scrollbars on this screen */
+  min-height: auto;
+  overflow-y: visible;
+}
+
+/* Full-screen loader */
+.full-screen-loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  z-index: 2000;
+}
+
+.loader-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  background: white;
+  padding: 6px;
+}
+
+.loader-side {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.loader-side span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.loader-side.left span:nth-child(2) { animation-delay: 0.12s; }
+.loader-side.left span:nth-child(3) { animation-delay: 0.24s; }
+.loader-side.right span:nth-child(1) { animation-delay: 0.24s; }
+.loader-side.right span:nth-child(2) { animation-delay: 0.12s; }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(0.7); opacity: 0.5; }
+  50% { transform: scale(1); opacity: 1; }
+}
+
+/* Header */
+.application-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.application-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a365d;
+  margin: 0;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #7c3aed;
+}
+
+.back-icon {
+  font-size: 16px;
+}
+
+/* Form Content */
+.form-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.step-content h5 {
+  color: #1a365d;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Simple Dropdown Styles */
+.simple-dropdown-section {
+  margin-bottom: 30px;
+}
+
+.simple-dropdown-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.simple-dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  min-height: 44px;
+}
+
+.simple-dropdown-header:hover {
+  border-color: #9ca3af;
+}
+
+.simple-dropdown-text {
+  color: #374151;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.simple-dropdown-arrow {
+  color: #6b7280;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.simple-dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.simple-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.simple-dropdown-option {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+  font-size: 16px;
+}
+
+.simple-dropdown-option:hover {
+  background-color: #f9fafb;
+}
+
+.simple-dropdown-option:last-child {
+  border-bottom: none;
+}
+
+/* Instructions Display */
+.instructions-display {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.instructions-display h6 {
+  color: #1a365d;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  text-align: left;
+}
+
+.instructions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.instruction-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.instruction-bullet {
+  color: #7c3aed;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.instruction-text {
+  color: #374151;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Form Section */
+.form-section {
+  max-width: 800px;
+}
+
+/* Specific override for Research Grant Application form layout */
+.rga-form-section {
+  padding: 0 !important;
+  width: 1000px !important;
+  max-width: 1000px !important;
+}
+
+/* Make inputs inside Research Grant Application full width (950px) */
+.rga-form-section .form-row {
+  flex-direction: column;
+}
+
+.rga-form-section .form-group {
+  flex: none;
+  width: 1000px;
+}
+
+/* Two-column layout for specific rows */
+.rga-form-section .form-row.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  flex-direction: initial;
+}
+
+.rga-form-section .form-row.two-col .form-group {
+  width: 100%;
+}
+
+.rga-form-section .form-row.two-col .form-group input,
+.rga-form-section .form-row.two-col .form-group select,
+.rga-form-section .form-row.two-col .form-group textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+.rga-form-section .form-group input,
+.rga-form-section .form-group select,
+.rga-form-section .form-group textarea {
+  width: 1000px;
+  max-width: 1000px;
+}
+
+/* Override: make textarea wider than inputs */
+.rga-form-section .form-group textarea {
+  width: 1080px;
+  max-width: 1100px;
+}
+
+/* Responsive: fall back to fluid width on small screens */
+@media (max-width: 1020px) {
+  .rga-form-section,
+  .rga-form-section .form-group,
+  .rga-form-section .form-group input,
+  .rga-form-section .form-group select,
+  .rga-form-section .form-group textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .rga-form-section .form-row.two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-section h5 {
+  color: #1a365d;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-section p {
+  color: #374151;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-section ul {
+  color: #374151;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.form-section ul ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-section li {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.form-section strong {
+  color: #dc2626;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Next Step Button */
+.next-step-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.next-step-button {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.next-step-button:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.next-step-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .application-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .application-title {
+    font-size: 2rem;
+  }
+
+  .form-content {
+    padding: 20px;
+  }
+
+  .simple-dropdown-container {
+    max-width: 100%;
+  }
+
+  .next-step-container {
+    margin-top: 30px;
+    padding-top: 15px;
+  }
+
+  .next-step-button {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .application-form-container {
+    padding: 15px;
+  }
+
+  .form-content {
+    padding: 15px;
+  }
+
+  .step-content h5 {
+    font-size: 1rem;
+  }
+
+  .form-section h5 {
+    font-size: 1.1rem;
+  }
+
+  .simple-dropdown-header {
+    padding: 10px 14px;
+    min-height: 42px;
+  }
+
+  .simple-dropdown-text {
+    font-size: 15px;
+  }
+
+  .simple-dropdown-arrow {
+    font-size: 11px;
+  }
+
+} 
+
+
+
+/* --- Shared simple modern tracker + nav styles (aligned with other steps) --- */
+
+/* Progress tracker container */
+.progress-tracker-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px 0 rgba(60,72,88,.08);
+  padding: 24px 32px 32px 32px;
+  margin: 18px auto 32px auto;
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+}
+
+/* Note bar */
+.modern-note {
+  background: #fff7ed;
+  border: 1.5px solid #ffb86b;
+  border-radius: 8px;
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  padding: 10px 18px;
+  margin-bottom: 10px;
+}
+
+.modern-note .note-icon { color: #ff9800; font-size: 18px; margin-right: 4px; }
+.modern-note .note-text { color: #ea580c; font-size: 15px; font-weight: 400; }
+.modern-note .deadline { color: #ff9800; font-weight: 700; }
+
+/* Progress tracker */
+.modern-progress-tracker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: #fbfbfc; /* stronger background */
+  border-radius: 12px;
+  padding: 10px 6px; /* more breathing room */
+  border: 2px solid #e3e3e6; /* thicker border */
+  width: 100%;
+  overflow: hidden; /* prevent focus ring/bleed */
+}
+
+.modern-progress-tracker *:focus { outline: none !important; box-shadow: none !important; }
+
+.modern-step-container { display: flex; align-items: center; gap: 8px; }
+
+.step-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  background: #f3f4f6;
+  color: #a0aec0;
+  border: 2px solid #e5e7eb;
+  transition: all 0.2s;
+}
+
+.step-circle.completed { background: #e6f9f0; color: #00b068; border-color: #00b068; }
+.step-circle.active { background: #1a1447; color: #fff; border-color: #1a1447; }
+.step-circle.inactive { background: #f3f4f6; color: #a0aec0; border-color: #e5e7eb; }
+
+.step-label {
+  font-size: 13px;
+  color: #a0aec0;
+  font-weight: 500;
+  margin-left: 2px;
+  margin-right: 6px;
+  min-width: 0;
+  white-space: nowrap;
+  transition: color 0.2s, font-weight 0.2s;
+}
+
+.step-label.active { color: #1a1447; font-weight: 700; }
+.step-label.completed { color: #00b068; font-weight: 600; }
+
+.modern-step-connector { width: 32px; height: 3px; background: #e5e7eb; margin: 0 1px; border-radius: 2px; }
+
+/* Basic form card to match others */
+.form-content { max-width: 1200px; margin: 0 auto; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); overflow: visible; }
+.step-content { padding: 30px; }
+
+/* Navigation buttons */
+.form-navigation { display: flex; justify-content: space-between; align-items: center; padding: 30px; background: #f8fafc; border-top: 1px solid #e5e7eb; gap: 20px; }
+.form-navigation.nav-bottom { background: linear-gradient(135deg, #f8fafc, #edf2f7); }
+.nav-button { padding: 14px 28px; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px; position: relative; overflow: hidden; min-width: 140px; }
+.nav-button::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
+.nav-button:hover::before { left: 100%; }
+.prev-button { background: #e2e8f0; color: #4a5568; border: 2px solid #cbd5e0; }
+.prev-button:hover { background: #cbd5e0; color: #2d3748; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.next-button { background: #10b981; color: #ffffff; }
+.next-button:hover { background: #059669; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(16,185,129,0.3); }
+.nav-button:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.nav-button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.nav-button:disabled:hover { transform: none; box-shadow: none; }
+
+/* Ensure the Research Grant Application bottom navigation spans full width */
+.rga-form-section .form-navigation.nav-bottom { width: 100%; }
+
+/* Simple form controls */
+.form-row { display: flex; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+.form-group { flex: 1; min-width: 220px; display: flex; flex-direction: column; }
+.form-group.full-width { flex: 1 0 100%; }
+.form-group label { margin-bottom: 0.3rem; font-weight: 600; color: #333; font-size: 0.95rem; }
+.form-group input, .form-group select, .form-group textarea { padding: 0.6rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.95rem; transition: border-color 0.3s; background: #fff; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #007bff; }
+.required { color: #ff6600; }
+.error-message { color: #e53935; font-size: 0.85rem; margin-top: 6px; }
+
+/* Helpers used in this screen */
+.character-count { color: #9ca3af; font-size: 12px; font-weight: 500; text-align: right; margin-top: 4px; }
+.textarea-container { position: relative; }
+.textarea-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.preview-toggle { background: none; border: none; color: #3b82f6; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 6px; }
+.preview-toggle:hover { background-color: #eff6ff; color: #2563eb; }
+.preview-section { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+.preview-content { display: grid; gap: 10px; }
+.preview-item { padding: 12px; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; }
+
+/* Input with currency prefix */
+.input-with-prefix { position: relative; display: flex; align-items: center; }
+.currency-prefix { position: absolute; left: 10px; color: #6b7280; font-weight: 600; }
+.input-with-prefix input { padding-left: 28px; }
+
+/* Spinner */
+.spinner { animation: spin 1s linear infinite; }
+@keyframes spin { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }
+
+/* Responsive adjustments for tracker and nav */
+@media (max-width: 1230px) {
+  .modern-progress-tracker { flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; text-align: left !important; gap: 10px; padding: 10px 4px; }
+  .modern-step-connector { width: 80vw !important; max-width: 600px; min-width: 300px; height: 2px; margin: 2px 0; }
+  .modern-step-container { gap: 10px; margin-bottom: 10px; }
+}
+
+@media (max-width: 900px) {
+  .modern-progress-tracker { flex-direction: column; align-items: flex-start; gap: 10px; padding: 10px 4px; }
+  .modern-step-connector { width: 2px; height: 32px; margin: 2px 0; }
+  .form-navigation { flex-direction: column; gap: 12px; padding: 18px 0 0 0; }
+  .nav-button { width: 100%; font-size: 15px; padding: 14px 0; }
+}
+ 

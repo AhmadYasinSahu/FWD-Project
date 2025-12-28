@@ -1,0 +1,5 @@
+[build]
+command = "npm run build"
+publish = "build"
+
+env = { REACT_APP_API_BASE_URL = "https://<your-render-service>.onrender.com/api" }

@@ -1,0 +1,210 @@
+/* Employment Information - Component Specific Styles */
+
+/* Accordion */
+.accordion-section {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1rem 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #343a40;
+  gap: 1rem;
+}
+
+.accordion-header .section-desc {
+  font-weight: 400;
+  color: #888;
+  font-size: 0.95rem;
+  margin-left: 1rem;
+  flex: 1;
+}
+
+.accordion-content {
+  padding: 0.5rem 0 1rem 0;
+}
+
+/* Smooth open/close for dropdown panels */
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease; /* faster close */
+}
+
+.accordion-panel.open {
+  max-height: 1200px;
+  transition: max-height 1.2s ease; /* smoother open */
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* Remove focus outline/box around radio inputs in organization type */
+.checkbox-label input[type="radio"]:focus,
+.checkbox-label input[type="radio"]:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Validation Error Styles */
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  font-weight: 500;
+}
+
+.form-group small {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Navigation Buttons (scoped for employment) */
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border-top: 1px solid #e5e7eb;
+  gap: 20px;
+}
+
+.form-navigation.nav-bottom { background: transparent; 
+padding: 30px 10px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  min-width: 110px;
+}
+
+.nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.nav-button:hover::before { left: 100%; }
+.nav-button:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.nav-button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.nav-button:disabled:hover { transform: none; box-shadow: none; }
+
+.prev-button { background: #e2e8f0; color: #4a5568; border: 2px solid #cbd5e0; }
+.prev-button:hover { background: #cbd5e0; color: #2d3748; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+.save-button { background: #48bb78; color: #212529; border: 2px solid #38a169; }
+.save-button:hover { background: #38a169; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(72, 187, 120, 0.3); }
+.next-button { background: transparent; color: #22c55e; border: 2px solid #22c55e; }
+.next-button:hover { background: #22c55e; color: #ffffff; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3); }
+
+/* Note + Modern Progress Tracker (scoped here for employment) */
+.modern-note { background: #fff7ed; border: 1.5px solid #ffb86b; border-radius: 8px; color: #ea580c; display: flex; align-items: center; gap: 10px; font-size: 15px; padding: 10px 18px; margin-bottom: 10px; }
+.modern-note .note-icon { color: #ff9800; font-size: 18px; margin-right: 4px; }
+.modern-note .note-text { color: #ea580c; font-size: 15px; font-weight: 400; }
+.modern-note .deadline { color: #ff9800; font-weight: 700; }
+
+.progress-tracker-card { background: #fff; border-radius: 12px; box-shadow: 0 1px 6px 0 rgba(60,72,88,.08); padding: 24px 32px 32px 32px; margin: 18px auto 32px auto; max-width: 1300px; width: 100%; display: flex; flex-direction: column; align-items: stretch; gap: 16px; }
+.modern-progress-tracker { display: flex; align-items: center; justify-content: center; gap: 0; background: #fff; border-radius: 10px; padding: 6px 2px; border: 1px solid #ececec; }
+.modern-step-container { display: flex; align-items: center; gap: 8px; }
+.step-circle { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; background: #f3f4f6; color: #a0aec0; border: 2px solid #e5e7eb; transition: all 0.2s; }
+.step-circle.completed { background: #e6f9f0; color: #00b068; border-color: #00b068; }
+.step-circle.active { background: #1a1447; color: #fff; border-color: #1a1447; }
+.step-circle.inactive { background: #f3f4f6; color: #a0aec0; border-color: #e5e7eb; }
+.step-label { font-size: 13px; color: #a0aec0; font-weight: 500; margin-left: 2px; margin-right: 6px; min-width: 0; white-space: nowrap; transition: color 0.2s, font-weight 0.2s; }
+.step-label.active { color: #1a1447; font-weight: 700; }
+.step-label.completed { color: #00b068; font-weight: 600; }
+.modern-step-connector { width: 28px; height: 2px; background: #e5e7eb; margin: 0 1px; border-radius: 1px; }
+
+/* Responsive adjustments for tracker */
+@media (max-width: 1230px) {
+  .modern-progress-tracker { flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; text-align: left !important; gap: 10px; padding: 10px 4px; }
+  .modern-step-connector { width: 80vw !important; max-width: 600px; min-width: 300px; height: 2px; margin: 2px 0; }
+  .modern-step-container { gap: 10px; margin-bottom: 10px; }
+}
+
+/* Empty state styles */
+.employment-empty-state {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 8px;
+}
+
+.empty-illustration {
+  width: 120px;
+  height: 120px;
+  background: #e9ecf2;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #10b981;
+  font-size: 56px;
+}
+
+.empty-title {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.empty-subtitle {
+  margin: 0 0 14px 0;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.add-employment-btn {
+  background: #10b981;
+  color: #ffffff;
+  border: 2px solid #10b981;
+}
+.add-employment-btn:hover { background: #059669; }
+
+
