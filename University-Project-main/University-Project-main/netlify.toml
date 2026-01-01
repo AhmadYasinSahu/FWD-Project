@@ -2,4 +2,13 @@
 command = "npm run build"
 publish = "build"
 
-env = { REACT_APP_API_BASE_URL = "https://<your-render-service>.onrender.com/api" }
+[build.environment]
+# Set this in Netlify UI for real deployments.
+# This default is only a placeholder for local/preview understanding.
+REACT_APP_API_BASE_URL = "https://<your-render-service>.onrender.com/api"
+
+[[redirects]]
+# SPA fallback so React Router routes work on refresh
+from = "/*"
+to = "/index.html"
+status = 200
